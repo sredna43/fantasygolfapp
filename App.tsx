@@ -1,13 +1,20 @@
+// Root wrappers
 import { Provider as PaperProvider } from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
+import { PreferencesContext } from "./PreferencesContext";
 
+// Functions
 import { useCallback, useMemo, useState } from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { PreferencesContext } from "./PreferencesContext";
+
+// Styles
 import { CombinedDefaultTheme, CombinedDarkTheme } from "./config/CustomTheme";
+
+// Components
 import CustomNavBar from "./components/CustomNavBar";
+
+// Pages
 import HomeScreen from "./pages/HomeScreen";
-import DraftScreen from "./pages/DraftScreen";
 import LeagueHomeScreen from "./pages/LeagueHomeScreen";
 
 const Stack = createNativeStackNavigator();
@@ -37,7 +44,6 @@ export default function App() {
             screenOptions={{ header: (props) => <CustomNavBar {...props} /> }}
           >
             <Stack.Screen name="Home" component={HomeScreen} />
-            <Stack.Screen name="Draft" component={DraftScreen} />
             <Stack.Screen name="LeagueHome" component={LeagueHomeScreen} />
           </Stack.Navigator>
         </NavigationContainer>
