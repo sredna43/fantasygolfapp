@@ -1,3 +1,3 @@
-# Master's Fantasy UI
+# Fantasy Golf App
 
-expo app
+Let's make an app do to fantasy golf the way I want to :) simple... right?
