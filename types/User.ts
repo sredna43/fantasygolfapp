@@ -1,6 +1,11 @@
 export interface User {
-  id: string;
+  id?: string;
   username: string;
   displayName: string;
-  leagueIds: Array<string>;
+  leagueIds?: Array<string>;
 }
+
+export const emptyUser: User = {
+  username: "",
+  displayName: "",
+};
